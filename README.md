@@ -111,11 +111,6 @@ The queue keeps sensor data moving from the producer task to the display task wi
 7. Open the Serial Monitor at 115200 baud.
 8. Use commands like STATUS, LED ON, and LED OFF.
 
----
-
-## License
-
-This project is released under the MIT License.
 
 ---
 
