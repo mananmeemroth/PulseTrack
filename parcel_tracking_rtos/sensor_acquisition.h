@@ -2,7 +2,7 @@
 #define SENSOR_TASK_H
 
 #include <Arduino.h>
-#include "config.h"
+#include "hardware_config.h"
 
 struct SensorData {
   float temperatureC;

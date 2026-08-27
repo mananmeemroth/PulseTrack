@@ -1,9 +1,9 @@
 #include <Arduino.h>
 #include <Wire.h>
-#include "config.h"
-#include "sensor_task.h"
-#include "display_task.h"
-#include "monitor_task.h"
+#include "hardware_config.h"
+#include "sensor_acquisition.h"
+#include "oled_display.h"
+#include "system_monitor.h"
 
 void setup() {
   Serial.begin(SERIAL_BAUD);

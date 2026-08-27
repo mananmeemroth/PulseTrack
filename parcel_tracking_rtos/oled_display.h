@@ -2,7 +2,7 @@
 #define DISPLAY_TASK_H
 
 #include <Arduino.h>
-#include "sensor_task.h"
+#include "sensor_acquisition.h"
 
 void startDisplayTask();
 void initOLED();

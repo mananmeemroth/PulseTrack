@@ -1,4 +1,4 @@
-#include "sensor_task.h"
+#include "sensor_acquisition.h"
 
 #include <DHT.h>
 

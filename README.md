@@ -44,7 +44,7 @@ If the temperature rises above the configured threshold or the vibration level b
 - OLED VCC → 3.3V / 5V as supported by the module
 - OLED GND → GND
 
-The pin layout and thresholds are stored in [parcel_tracking_rtos/config.h](parcel_tracking_rtos/config.h).
+The pin layout and thresholds are stored in [parcel_tracking_rtos/hardware_config.h](parcel_tracking_rtos/hardware_config.h).
 
 ---
 
@@ -52,23 +52,23 @@ The pin layout and thresholds are stored in [parcel_tracking_rtos/config.h](parc
 
 ```text
 parcel_tracking_rtos/
-├── parcel_tracking_rtos.ino
-├── config.h
-├── sensor_task.h
-├── sensor_task.cpp
-├── display_task.h
-├── display_task.cpp
-├── monitor_task.h
-├── monitor_task.cpp
+├── pulse_track_main.ino
+├── hardware_config.h
+├── sensor_acquisition.h
+├── sensor_acquisition.cpp
+├── oled_display.h
+├── oled_display.cpp
+├── system_monitor.h
+├── system_monitor.cpp
 ```
 
 ### Files
 
-- [parcel_tracking_rtos/parcel_tracking_rtos.ino](parcel_tracking_rtos/parcel_tracking_rtos.ino): main Arduino sketch; initializes UART and starts the RTOS tasks
-- [parcel_tracking_rtos/config.h](parcel_tracking_rtos/config.h): pin definitions, thresholds, task priorities, and timing values
-- [parcel_tracking_rtos/sensor_task.cpp](parcel_tracking_rtos/sensor_task.cpp): reads temperature and vibration and publishes sensor data
-- [parcel_tracking_rtos/display_task.cpp](parcel_tracking_rtos/display_task.cpp): refreshes the OLED display with the latest readings
-- [parcel_tracking_rtos/monitor_task.cpp](parcel_tracking_rtos/monitor_task.cpp): handles the interrupt-driven button input and monitoring mode
+- [parcel_tracking_rtos/pulse_track_main.ino](parcel_tracking_rtos/pulse_track_main.ino): main Arduino sketch; initializes UART and starts the RTOS tasks
+- [parcel_tracking_rtos/hardware_config.h](parcel_tracking_rtos/hardware_config.h): pin definitions, thresholds, task priorities, and timing values
+- [parcel_tracking_rtos/sensor_acquisition.cpp](parcel_tracking_rtos/sensor_acquisition.cpp): reads temperature and vibration and publishes sensor data
+- [parcel_tracking_rtos/oled_display.cpp](parcel_tracking_rtos/oled_display.cpp): refreshes the OLED display with the latest readings
+- [parcel_tracking_rtos/system_monitor.cpp](parcel_tracking_rtos/system_monitor.cpp): handles the interrupt-driven button input and monitoring mode
 
 ---
 
@@ -105,7 +105,7 @@ The queue keeps sensor data moving from the producer task to the display task wi
    - DHT Sensor Library by Adafruit
    - Adafruit SSD1306
    - Adafruit GFX
-4. Open [parcel_tracking_rtos/parcel_tracking_rtos.ino](parcel_tracking_rtos/parcel_tracking_rtos.ino).
+4. Open [parcel_tracking_rtos/pulse_track_main.ino](parcel_tracking_rtos/pulse_track_main.ino).
 5. Select the correct ESP32 board and COM port.
 6. Compile and upload the sketch.
 7. Open the Serial Monitor at 115200 baud.

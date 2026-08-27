@@ -2,8 +2,8 @@
 #define MONITOR_TASK_H
 
 #include <Arduino.h>
-#include "config.h"
-#include "sensor_task.h"
+#include "hardware_config.h"
+#include "sensor_acquisition.h"
 
 extern SemaphoreHandle_t monitorSemaphore;
 extern bool systemArmed;

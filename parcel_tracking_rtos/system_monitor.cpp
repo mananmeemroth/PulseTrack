@@ -1,4 +1,4 @@
-#include "monitor_task.h"
+#include "system_monitor.h"
 
 SemaphoreHandle_t monitorSemaphore;
 bool systemArmed = true;
